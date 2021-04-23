@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+
+.student-profile img {
+  width: 50%;
+  height: 50%;
+  border-radius: 2%;
+}
+
+ul {
+  display: flex;
+  margin: auto;
+  white-space: normal;
+}

@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Template Outlet example :)<br>
+  - We can use template outlet where we have repeated code
+</p>
+
+	<!--
+  Creating the template example
+-->
+	<ng-template #student let-data let-n="name" let-default>
+		<div class="student-profile">
+			<h2>Student Name:{{n ? n : default}}</h2>
+			<img src="https://picsum.photos/seed/picsum/200/300"></div>
+	</ng-template>
+
+
+	<div>
+		<ul>
+			<li *ngTemplateOutlet="student;context:{name:'Divesh',$implicit:'Default Value'}">
+			</li>
+			<li *ngTemplateOutlet="student;context:{$implicit:'Default value'}"></li>
+
+		</ul>
+	</div>
